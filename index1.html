@@ -1,0 +1,46 @@
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@16.3.0/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16.3.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+<!-- <script type="text/javascript"> -->
+<script type="text/babel">
+
+const rootElement = document.getElementById("root")
+//const element = document.createElement("div")
+//element.textContent = 'Hello World!'
+//element.className = 'container'
+//rootElement.appendChild(element)
+
+//const element = React.createElement('div', 
+//{className: 'container'}, 
+//'hello world', 'goodbye world', 'teest')
+
+// const element = React.createElement('div', {
+// className: 'container',
+// children: ['Hello world', 'goodbye', '12345'],
+// })
+// console.log(element)
+// ReactDOM.render(element, rootElement)
+
+// const content = "Hello world"
+// const myClassName = 'container'
+// const element = <div className={myClassName + 'dodacemo nestooo'}>{content}</div>
+
+// const element = <div className = 'container'>Hello world</div>
+
+const props = {
+    className:"container",
+    children:"Hello world"
+}
+
+// ako hocemo da overrajdujemo npr ime klase 'className' ili content tj 'children' mozemo ako
+// ih stavimo iza propsa i <div> elementu const element = <div {...props} className = "bla" />
+// isto tako i za children a njih mozemo isto napisat posle propsa ili bas izmedju div taga tj onda nije
+// samozatvarajuci vec regularni, ako to sve isto napisemo pre propsa nece se overrajdovati
+
+const element = <div {...props}/>
+console.log(element)
+
+ReactDOM.render(element, rootElement)
+</script>
