@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Learn React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+    <script type="text/babel">
+      const rootElement = document.getElementById("root");
+
+      /*const helloWorld = <div>Hello World</div>;
+      const element = (
+        <div className="container">
+          {helloWorld}
+          {helloWorld}
+        </div>
+      ); */
+
+      //const content = "Hello World";
+      //const myClassName = "container";
+
+      /*const props = {
+        className: "container",
+        children: "Hello World"
+      };
+      const element = <div {...props} />; */
+
+      const Message = props => <div>{props.children}</div>;
+      const element = (
+        <div className="container">
+          <Message>Hello</Message>
+          <Message>Goodbye</Message>
+        </div>
+      );
+      ReactDOM.render(element, rootElement);
+    </script>
+  </body>
+</html>
